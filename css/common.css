@@ -195,3 +195,7 @@ legend {
   display: block;
   clear: both;
 }
+
+body {font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+font-size: 16px; color: #444;}
+.row {max-width: 1050px; margin: 0 auto;}
