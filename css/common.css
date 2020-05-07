@@ -251,9 +251,70 @@ font-size: 16px; color: #444; letter-spacing: -1px;}
 .place_list > li {float: left; width: 32%; margin-left: 2%; position: relative; top:-50px; text-align: center;} 
 .place_list > li:first-child {margin-left: 0%;}
 /*:nth-child(n), last-childsms :first-child에 비해 호환성이 낮음  */
-.place_list > li h3 {font-weight: bold; font-size: 18px; padding-top: 25px; color:#000;}
-.place_list > li .txt {padding:10px 30px 0; line-height: 1.8; color:#666;}
-.place_list > li .view {border-top: 2px solid #333; color:#666; padding-top: 5px; margin-top: 20px; display: inline-block;}
+/* 이미지호버 */
+.place_list li .imgbox {
+  height: 328px;
+  overflow: hidden;
+  position: relative;
+}
+.place_list li .imgbox img {
+  transition: all 0.4s;
+}
+.place_list li .imgbox:hover img {
+  transform: scale(1.1);
+}
+.place_list li .imgbox:after {
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 50%;
+  bottom:50%;
+  right: 50%;
+  background: rgba(0,0,0,0.3);
+  transition: all 0.4s;
+}
+.place_list li .imgbox:hover:after {
+  top:0;
+  left: 0;
+  bottom:0;
+  right: 0;
+}
+.place_list li .imgbox:before {
+  content: "\f00e";
+  font-family:'Font Awesome 5 Free'; 
+  font-weight:900 !important;
+  color:#fff;
+  font-size: 30px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.4s;
+  z-index: 999999;
+}
+.place_list li .imgbox:hover:before {
+  opacity: 1;
+}
+
+.place_list > li h3 {
+   font-weight: bold; 
+   font-size: 18px; 
+   padding-top: 25px;
+   color:#000;
+  }
+.place_list > li .txt {
+  padding:10px 30px 0;
+  line-height: 1.8;
+  color:#666;
+}
+.place_list > li .view {
+  border-top: 2px solid #333; 
+  color:#666; 
+  padding-top: 5px; 
+  margin-top: 20px; 
+  display: inline-block;
+}
 
 .bgbox {
   background: url(../img/mainslide03.jpg) no-repeat;
