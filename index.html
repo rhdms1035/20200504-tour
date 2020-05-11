@@ -2,15 +2,17 @@
 <html lang="ko">
 
 <head>
-	<title>Tourist in tour</title>
+	<title> 투어리스트인투어 </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
 	<link rel="stylesheet" href="css/common.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">	
+	<link rel="stylesheet" href="css/rwd.css">
 	<!--[if lte IE 9]>
-    <script src="js/html5shiv.js"></script>
-<![endif]-->
+		<script src="js/html5shiv.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+	<![endif]-->
 </head>
 
 <body>
@@ -19,8 +21,16 @@
 		<div class="skipnav"><a href="#container">본문 바로가기</a></div>
 
 		<header id="header">
-			<div class="header_area row cf">
+			<div class="header_area  row  cf">
 				<h1><a href="#">Tourist in tour</a></h1>
+				<p class="openMOgnb">
+					<a href="#none">
+						<strong class="blind">메뉴열기</strong>
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</p>
 				<div class="header_cont">
 					<ul class="util">
 						<li><a href="#">로그인</a></li>
@@ -30,35 +40,35 @@
 						<ul class="depth1">
 							<li><a href="#" class="openAll1">여행정보</a>
 								<div class="dep2box">
-								<ul class="depth2 row">
-									<li><a href="#">국내</a></li>
-									<li><a href="#">해외</a></li>
-								</ul>
-							</div>
+									<ul class="depth2 row">
+										<li><a href="#">국내</a></li>
+										<li><a href="#">해외</a></li>
+									</ul>
+							   </div>
 							</li>
 							<li><a href="#" class="openAll2">고객센터</a>
 								<div class="dep2box">
-								<ul class="depth2 row">
-									<li><a href="#">공지사항</a></li>
-									<li><a href="#">문의하기</a></li>
-								</ul>
-							</div>
+									<ul class="depth2 row">
+										<li><a href="#">공지사항</a></li>
+										<li><a href="#">문의하기</a></li>
+									</ul>
+							   </div>
 							</li>
 							<li><a href="#" class="openAll3">상품투어</a>
 								<div class="dep2box">
-								<ul class="depth2 row">
-									<li><a href="#">프로그램 소개</a></li>
-									<li><a href="#">여행자료</a></li>
-								</ul>
-							</div>
+									<ul class="depth2 row">
+										<li><a href="#">프로그램 소개</a></li>
+										<li><a href="#">여행자료</a></li>
+									</ul>
+							   </div>
 							</li>
 							<li><a href="#" class="openAll4">티켓/가이드</a>
 								<div class="dep2box">
-								<ul class="depth2 row">
-									<li><a href="#">항공</a></li>
-									<li><a href="#">호텔</a></li>
-								</ul>
-							</div>
+									<ul class="depth2 row">
+										<li><a href="#">항공</a></li>
+										<li><a href="#">호텔</a></li>
+									</ul>
+								</div>
 							</li>
 						</ul>
 					</nav>
@@ -69,42 +79,39 @@
 		<div id="container">
 			<div class="main_rolling_pc">
 				<div class="visualRoll">
-
 					<div class="slide slide1">
 						<div class="text">
-						<p>TRUST &amp; INFORMATION</p>
-						<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
-						<p>BE TOURIST FOR BETTER LIFE</p>
-					   </div>
+							<p>TRUST &amp; INFORMATION</p>
+							<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
+							<p>BE TOURIST FOR BETTER LIFE</p>
+						</div>
 					</div>
-
 					<div class="slide slide2">
 						<div class="text">
-						<p>TRUST &amp; INFORMATION</p>
-						<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
-						<p>BE TOURIST FOR BETTER LIFE</p>
-					   </div>
+							<p>TRUST &amp; INFORMATION</p>
+							<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
+							<p>BE TOURIST FOR BETTER LIFE</p>
+						</div>
 					</div>
-
 					<div class="slide slide3">
 						<div class="text">
-						<p>TRUST &amp; INFORMATION</p>
-						<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
-						<p>BE TOURIST FOR BETTER LIFE</p>
-					   </div>
+							<p>TRUST &amp; INFORMATION</p>
+							<p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
+							<p>BE TOURIST FOR BETTER LIFE</p>
+						</div>
 					</div>
-					
 				</div>
 			</div>
 
 			<div class="about_area">
-				<h2>다시 찾는 인기 여행지 <b>TOP 3</b></h2>
+				<h2 class="row">다시 찾는 인기 여행지 <b>TOP 3</b></h2>
 				<div class="about_box">
-					<ul class="place_list row cf">
-						<li><a href="#">
-							<div class="imgbox">
-								<img class="img_topplace" src="img/img_topplace01.jpg" alt="다리를 높이 들어 운동" />
-							</div>
+					<ul class="place_list  row  cf">
+						<li>
+							<a href="#">
+								<div class="imgbox">
+								    <img class="img_topplace" src="img/img_topplace01.jpg" alt="다리를 높이 들어 운동" />
+							    </div>
 								<h3>성패트릭 대성당</h3>
 								<p class="txt">바쁜 뉴욕 안에서 정교하면서도 웅장한 기운에 침묵하게 되는 기도의 시간!</p>
 								<span class="view">VIEW</span>
@@ -133,14 +140,14 @@
 			</div>
 
 			<div class="bgbox">
-				<div class="txt row">
-					<p>사회적 거리는 늘이고 마음의 거리는 좁히고</p>
-					<p>5월 가족 여행의 모든것 - 대한민국 구석구석에서 완전정보</p>
+				<div class="txt  row">
+						<p>사회적 거리는 늘이고 마음의 거리는 좁히고</p>
+						<p>5월 가족여행의 모든 것 - 대한민국 구석구석에서 완전정보</p>
 				</div>
 			</div>
 
 			<div class="appbbs_area">
-				<div class="appbbs_box row cf">
+				<div class="appbbs_box  row  cf">
 					<h2 class="blind">상담과 최근게시물</h2>
 					<p class="app_line">
 						<a href="javascript:;">카카오톡 1:1 상담</a>
@@ -149,11 +156,11 @@
 					<div class="bbs_line">
 						<h3>NOTICE</h3>
 						<ul class="notice_recent">
-							<li><a href="javascript:;">이번 여름 휴가 제주 갈까? 미션 투어 (여행경비 50만원 지원)</a></li>
-							<li><a href="javascript:;">박물관 미션 투어 응모 당첨자 발표</a></li>
-							<li><a href="javascript:;">추석 연휴 티켓/투어 배송 및 직접 수령 안내</a></li>
-							<li><a href="javascript:;">하롱베이 서비스 OPEN! (여행정보, 가이드북, 가이드맵)</a></li>
-							<li><a href="javascript:;">투어리스트인투어 서비스 점검 안내</a></li>
+							<li><a href="#none">이번 여름 휴가 제주 갈까? 미션 투어 (여행경비 50만원 지원)</a></li>
+							<li><a href="#none">박물관 미션 투어 응모 당첨자 발표</a></li>
+							<li><a href="#none">추석 연휴 티켓/투어 배송 및 직접 수령 안내</a></li>
+							<li><a href="#none">하롱베이 서비스 OPEN! (여행정보, 가이드북, 가이드맵)</a></li>
+							<li><a href="#none">투어리스트인투어 서비스 점검 안내</a></li>
 						</ul>
 					</div>
 				</div>
@@ -192,7 +199,7 @@
 					<p>010-1234-5678</p>
 				</a></li>
 			<li><a href="javascript:;">
-					<h3>카카오톡</h3>
+					<h3>카카오톡 <em>상담</em></h3>
 					<p>1:1상담</p>
 				</a></li>
 			<li><a href="javascript:;">
