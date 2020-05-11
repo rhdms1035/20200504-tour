@@ -21,7 +21,44 @@
       .depth1 > li:nth-child(4)  .depth2  {    padding-left:55%  }
       .depth1 > li:nth-child(4)  .depth2 > li { padding-right:0 }
 
+      /* 퀵메뉴박스 스타일  */
+      .quick_area { position:fixed; right:20px; top:50%;
+        margin-top:-22.5px;
+        width:45px; z-index:9999999 }
+      .quick_list {display: block; position: fixed; 
+        bottom: 0; left: 0; width:100%;}
+
+     .quick_list   li {    text-align: center; float: left; width: 33.33%;
+          background: #282828;    font-size: 15px;    }
+      .quick_list   li   a { display: block;   padding: 15px 0;  
+         border-top: 1px solid #4d4d4d; 
+         border-left: 1px solid #4d4d4d;   }    
+      .quick_list   li:nth-child(1)   a {border-left: none;} 
+      .quick_list  li   a  h3 {  padding-bottom: 0px;
+          color: #ddd;   letter-spacing: -2px;  font-size: inherit;  }
+      .quick_list  li   a  p {   line-height: 1.3;   font-size: 12px;
+        color: #fff; display: none;}
+    
+        /*인터넷창이 줄어들면 퀵박스가 바뀜 */
+      .to_top {text-align: center;  background: #282828;
+      width: 45px; height: 45px; border-radius: 50%;  
+      border: 1px solid #a3a3a3; }  
+      .to_top  a {   display: block; 
+        line-height:45px; padding-top:8px;
+        border: 0px solid #a3a3a3;
+        border-top:none; border-right:none; 
+        color:#fff;  position:relative; }
+      .to_top  a:before  {  content:""; display:block; 
+          width:0px; height:0px; 
+          border:7px  solid  #fff;
+          /* ▼(top) ▲(bottom)  ▶(left)  ◀(right) */
+          border-top:none; 
+          border-left-color:transparent;
+          border-right-color:transparent;
+          position:absolute; left:50%; margin-left:-7px; }
+
 }
+
 /* 줄였을때 왼쪽상단에 세줄짜리 모양만들기 */
 @media  screen  and  (max-width:799px) {
 
@@ -33,6 +70,33 @@
     .openMOgnb   span:nth-of-type(2)   { width:17px }
     .openMOgnb   span:nth-of-type(3)   { margin-bottom:0 }
 
+
+      /* 퀵메뉴박스 스타일  */
+      .quick_area { position:fixed; right:20px; top:50%;
+        margin-top:-22.5px; 
+        width:45px; z-index:9999999 }
+      .to_top {display: none;}
+      .quick_list {display: block; position: fixed; 
+        bottom: 0; left: 0; width:100%;}
+
+     .quick_list   li {    text-align: center; float: left; width: 33.33%;
+          background: #282828;    font-size: 15px;    }
+      .quick_list   li   a { display: block;   padding: 15px 0;  
+         border-top: 1px solid #4d4d4d; 
+         border-left: 1px solid #4d4d4d;   }    
+      .quick_list   li:nth-child(1)   a {border-left: none;} 
+      .quick_list  li   a  h3 {  padding-bottom: 0px;
+          color: #ddd;   letter-spacing: -2px;  font-size: inherit;  }
+      .quick_list  li   a  p {   line-height: 1.3;   font-size: 12px;
+        color: #fff; display: none;}
+
+/* 작은화면 메뉴닫기버튼 */
+    #header.on .closeMOgnb {display: block; position: absolute; top:40px; right: 15px; width: 25px; height: 17px; }
+    .closeMOgnb a {display: block;}
+    /* 엑스모양만들기 */
+    .closeMOgnb span {display: block; width: 25px; height: 3px; border-radius: 10px; transform: rotate(45deg); 
+    background: #fff;  position: absolute; top:0; left: 0;}
+    .closeMOgnb span:nth-of-type(2) {transform: rotate(-45deg);}
 
     #header {  background:rgba(0, 0, 0, 0.5); color:#fff; 
         position:absolute;  height:90px; width: 100%; 
