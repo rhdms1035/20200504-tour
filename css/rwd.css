@@ -1,10 +1,11 @@
 @charset "utf-8";
 
+/* ★★★★★★★화면 1050크기 */
 @media  screen  and  (max-width:1050px) {
    
      #header  h1  {float:left; padding:45px 0 0 20px;}
      #header .header_cont { float:right; width:60%; padding-right:20px }
-      
+          
       .depth1 { text-align:right;  }
       .depth1 > li { display:inline-block; 
         font-size:18px; color:#fff;  padding:30px 20px 43px}
@@ -20,6 +21,15 @@
       .depth1 > li:nth-child(3)  .depth2,
       .depth1 > li:nth-child(4)  .depth2  {    padding-left:55%  }
       .depth1 > li:nth-child(4)  .depth2 > li { padding-right:0 }
+
+      /* 슬라이드안에 3개의 글자 */
+      .slide  .text  p:nth-child(1) { font-size:50px;
+        letter-spacing:5px; text-shadow:2px 2px 5px #555; 
+       border-bottom:1px solid #999; padding-bottom:10px  }
+     .slide  .text  p:nth-child(2) { font-size:20px;
+       letter-spacing:0px; margin-top:20px; }
+     .slide  .text  p:nth-child(3) { font-size:20px; 
+       letter-spacing:0px; position:relative; top:150px; }
 
       /* 퀵메뉴박스 스타일  */
       .quick_area { position:fixed; right:20px; top:50%;
@@ -59,9 +69,29 @@
 
 }
 
-/* 줄였을때 왼쪽상단에 세줄짜리 모양만들기 */
+/* ★★★★★★★화면 799크기 */
 @media  screen  and  (max-width:799px) {
 
+ bgbox  .txt  p:nth-child(1)   { font-size:12px }
+.bgbox  .txt  p:nth-child(2)   { font-size:20px;
+   line-height:1.2;  margin-top:10px; }
+
+  /* 다시 찾는 인기여행지 top3 */
+.about_area  h2 {
+  padding: 55px 0 55px;
+  text-align: center;
+  font-size: 20px;
+}
+.place_list   li { float:left; width:96%; margin-left:2%;
+  margin-right: 2%; margin-bottom: 30px;
+  position:relative; top:0px; text-align:center }
+.place_list   li:first-child { margin-left:2%  }
+/* nth-child(n), last-child는 first-child에 비해 호환성이 낮음 */
+.place_list  li  .imgbox { height:auto; overflow:hidden; 
+  position:relative; }
+.place_list  li  .imgbox  img { transition:all 0.4s; width: 100%; }
+
+  /* 줄였을때 왼쪽상단에 세줄짜리 모양만들기 */
     .openMOgnb { display:block; position:absolute;
         top:35px; left:15px; width:25px; height:17px;  }
     .openMOgnb   span  { display:block; width:25px; height:3px;
@@ -70,6 +100,11 @@
     .openMOgnb   span:nth-of-type(2)   { width:17px }
     .openMOgnb   span:nth-of-type(3)   { margin-bottom:0 }
 
+    .slide  .text  p:nth-child(1) { font-size:30px;
+      letter-spacing:5px; text-shadow:2px 2px 5px #555; 
+     border-bottom:1px solid #999; padding-bottom:10px  }
+   .slide  .text  p:nth-child(2) { font-size:16px;
+     letter-spacing:0px; margin-top:20px; }
 
       /* 퀵메뉴박스 스타일  */
       .quick_area { position:fixed; right:20px; top:50%;
