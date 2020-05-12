@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* ★★★★★★★화면 1050크기 */
+/* ★★★★★★★★★★★★★★★★★★★★★★★★★★★화면 1050크기 */
 @media  screen  and  (max-width:1050px) {
    
      #header  h1  {float:left; padding:45px 0 0 20px;}
@@ -88,11 +88,16 @@
       margin-right:0%;
       background-image: url(../img/ico_phone.png);
       padding-left: 85px; }
-.bbs_line { float: right;    width: 30%;   }
+.bbs_line { float: right;    width: 30%;  padding-right: 20px; }
+
+footer {
+  border-top: 1px solid #ddd;
+  padding-left: 10px; padding-right: 10px;
+}
 
 }
 
-/* ★★★★★★★화면 799크기 */
+/* ★★★★★★★★★★★★★★★★★★★★★★★화면 799크기 */
 @media  screen  and  (max-width:799px) {
 
 .bgbox  .txt  p:nth-child(1)   { font-size:12px }
@@ -232,4 +237,33 @@
       padding-left: 85px; }
 
 .bbs_line { float: none;    width: 100%;  padding: 20px;  }
+}
+
+.foot_list  li {   display:inline-block;  margin-top:25px; 
+  font-weight: bold;   font-size: 15px; }
+.foot_list   li:first-child:after {
+    content: "|";   display: inline-block;
+    padding: 0  10px;    font-size: 10px; 
+    color: #000;     position: relative;    top: -2px;  left:2px  }  
+ .foot_area  h2 {  padding-top: 25px;
+      font-size: 14px;    color: #666;    }
+.foot_area  .addr {    padding-top: 5px;
+        line-height: 1.4;      font-size: 13px;      color: #666;      }
+.foot_area   .copy {   padding-top: 3px;
+          font-size: 13px;   color: #666;   letter-spacing: 0;     }      
+.foot_area   .snslink { position: static; top:0; right:0; 
+  text-align: center;}
+.foot_area { position:relative; padding-bottom:40px }
+.foot_area   .snslink  li { display:inline-block; margin:30px  10px }
+.foot_area   .snslink  li  a { display:block; 
+  width:50px; height:73px; 
+  background:url(../img/sprite.png) no-repeat;
+  background-position:0 0;
+  text-indent:-9999px; overflow:hiddden;
+}
+.foot_area   .snslink  li+li  a {
+   background-position:-50px  0; 
+}
+.foot_area   .snslink  li+li+li  a {
+  background-position:-100px  0; 
 }
