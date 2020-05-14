@@ -237,7 +237,7 @@ footer {
       padding-left: 85px; }
 
 .bbs_line { float: none;    width: 100%;  padding: 20px;  }
-}
+
 
 .foot_list  li {   display:inline-block;  margin-top:25px; 
   font-weight: bold;   font-size: 15px; }
@@ -266,4 +266,6 @@ footer {
 }
 .foot_area   .snslink  li+li+li  a {
   background-position:-100px  0; 
+}
+
 }
