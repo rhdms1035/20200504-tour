@@ -84,4 +84,25 @@
     letter-spacing: -1px;
     color:#444;
     padding: 10px;
+    line-height: 1.5em;
+}
+.join_form .btn {
+    text-align: center;
+    margin-top: 20px;
+}
+.join_form .btn input {
+    width: 80px;
+    height: 40px;
+    background:#000;
+    color:#fff;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+.join_form .btn input[type='reset'] {
+    background: #555;
+}
+.join_form .btn input:hover {
+    background: red;
 }
