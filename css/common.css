@@ -21,7 +21,19 @@ fieldset {border: none;}
 input[type='submit']:hover, 
 input[type='reset']:hover,
 button:hover {cursor: pointer;}
-
+select {
+  -webkit-appearance:none;
+  appearance: none;
+  background: url(../img/ico_selectArr.png) no-repeat 100% 50%;
+}
+input[type='radio'],
+input[type='checkbox'] {
+  -webkit-appearance:none;
+  appearance: none;
+}
+.radio_area label {
+  background: url(../img/bg_radio.png) no-repeat 0 0;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
