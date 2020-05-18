@@ -134,6 +134,6 @@
 .join_form .radio_area input [type='radio']:checked+label {
     background: url(../img/bg_radio.png) no-repeat 0 -50px;
 }
-.join_form .hobby_area input [type='checkbox']:checked+label {
-    background-size: 0 -15px;
+.join_form   .hobby_area   input[type='checkbox']:checked+label {
+    background-position:0 -15px
 }
