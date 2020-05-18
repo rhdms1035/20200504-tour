@@ -106,3 +106,14 @@
 .join_form .btn input:hover {
     background: red;
 }
+.join_form .radio_area,
+.join_form .hobby_area {
+    height: 45px;
+    line-height: 45px;
+}
+.join_form .radio_area label,
+.join_form .hobby_area label {
+    padding-right: 20px;
+    font-size: 15px;
+    color: #444;
+}
