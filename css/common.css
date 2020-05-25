@@ -163,7 +163,7 @@ padding:10px 0 0 20px; }
 .dep2box { position:absolute; left:0; width:100%; 
   background:rgba(250,100,0,0.85); z-index:100;
   top:116px; display:none;  text-align:left; }
-.depth1 > li:hover  .dep2box { display:block }
+/* .depth1 > li:hover  .dep2box { display:block } */
 .depth2 > li { display:inline-block; padding:20px  }
 .depth1 > li:nth-child(1)  .depth2 { 
   padding-left:440px }
