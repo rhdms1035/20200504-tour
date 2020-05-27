@@ -40,10 +40,13 @@ $(window).resize(function(){
     init()
 })
 
+// 로딩표시 불러와서 딜레이시켰다가 없어지게끔
 $(window).load(function(){
-    $(this).width()
+    $(".loadingAni").delay(1000).fadeOut(500)
+    init()
 })
 
+// 작은화면에서 메뉴를 키고 큰화면으로 다시 넘어왔을때 메뉴부분 나타나게하기
 $(".depth1 > li > a").on("mouseover focus", function(){
     if ( $(this).parents("#header").hasClass("on")) {
         $(this).next().fadeOut(0)
@@ -54,6 +57,7 @@ $(".depth1 > li > a").on("mouseover focus", function(){
     }
 })
 
+// 메뉴에 마우스 올렸을때 서브메뉴 내려왔다가 올라가기
 $(".depth1 > li").on("mouseleave", function(){
     $(this).children(".dep2box").stop().slideUp(400)
 })
