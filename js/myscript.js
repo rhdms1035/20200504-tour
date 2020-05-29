@@ -82,6 +82,7 @@ $(".place_list > li > a").on("click", function(e){
     // 위 경로에 담겨 있는 링크가 눌리지 않게 preventDefault(); 요거를 씀
     e.preventDefault();
     // 각 속성을 가진게 추출이 되서 var 값에 담김
+    $(this).parent().offset().top
     var href = $(this).attr("href")
     var src = $(this).attr("data-src")
     var text = $(this).find("h3").text()
