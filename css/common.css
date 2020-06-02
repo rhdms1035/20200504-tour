@@ -215,7 +215,61 @@ background-position:center; position:relative }
 }
 .slide  .text  p:nth-child(3) { font-size:20px; 
   letter-spacing:3px; position:relative; top:150px; }
-.slide2,  .slide3 { display:none }
+/* .slide2,  .slide3 { display:none } * 제이쿼리소스로할거라서 주석처리/
+
+/* 슬릭->슬라이드 양쪽화살표버튼 스타일잡기 */
+.main_rolling_pc {position: relative;}
+.marrow {
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 50px;
+  color:#fff;
+}
+.prevArrow { left: 20px; z-index: 99999999;}
+.nextArrow {right: 20px;}
+
+/* 슬릭->슬라이드 번호버튼 스타일잡기 */
+/* 동그라미버튼은 플러그인으로 불러왔기 때문에 .slick-dots으로 무조건해야함 */
+.slick-dots {
+  position: absolute;
+  bottom: 20px;
+  width:100%;
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
+}
+.slick-dots li button {
+  width:15px;
+  height: 15px;
+  background: #fff;
+  border: none;
+  text-indent: -999999px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.slick-dots li.slick-active button {
+  width:30px;
+  border-radius: 50px;
+}
+/* 메인슬라이드에 만든 스탑버튼 스타일잡기 */
+.plpa {
+  position: absolute;
+  bottom: 19px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color:#fff;
+  right: 0;
+  width:50%;
+  text-align: left;
+  padding-left: 60px;
+}
+
 
 /* 다시 찾는 인기여행지 top3 */
 .about_area  h2 {

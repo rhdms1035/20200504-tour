@@ -269,3 +269,16 @@ footer {
 }
 
 }
+
+/* ★★★★★★★★★★★★★★★★★★★★★★★화면 500크기 */
+@media screen and (max-width:500px) {
+  .popupBox.on  button {
+    font-size:40px;
+    color:#fff;
+    position:absolute;
+    top:-30px; 
+    right:-30px; 
+    background:none;
+    border:none;
+  }
+}
