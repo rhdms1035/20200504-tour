@@ -130,3 +130,18 @@ $(".visualRoll").slick({
     prevArrow: '<button class="prevArrow marrow"><i class="fas fa-angle-left"></i></button>',
     nextArrow: '<button class="nextArrow marrow"><i class="fas fa-angle-right"></i></button>',
 })
+
+//메인슬라이드 스탑버튼활성화
+$(".plpa").toggle(
+    function(){
+        $(".visualRoll").slick("slickPause")
+        // 일시정지버튼에서 플레이버튼으로 바꾸기
+        $(this).find("i").removeClass("fa-pause").addClass("fa-play")
+    },
+    function(){
+        $(".visualRoll").slick("slickPlay")
+        $(this).find("i").removeClass("fa-play").addClass("fa-pause")
+    }
+
+
+)
