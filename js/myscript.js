@@ -11,6 +11,14 @@ $(window).scroll(function(){
         } else {
             $("to_top").show()
         }
+// 1000픽셀로 가면 애니메이션효과 나타나게 하기
+        if (sct > 1000) {
+            $(".appbbs_box").addClass("on")
+        } else {
+            $(".appbbs_box").removeClass("on")
+        }
+
+
 })
 
 // 탑버튼을 누르면 자연스럽게 위로 
@@ -173,3 +181,6 @@ $(".multi_visual").slick({
         }
     }]
 })
+
+
+

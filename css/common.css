@@ -454,10 +454,21 @@ background-position:center; position:relative }
    .appbbs_area {
     padding: 60px 0;
   }
+.appbbs_box {overflow: hidden;}
  .appbbs_box  .app_line {
     float: left;     width: 66%;     padding: 45px 0;
     text-align: center; 
-    background: url(../img/bg_app.jpg) no-repeat;   }
+    background: url(../img/bg_app.jpg) no-repeat;
+    -webkit-transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-200%, 0, 0);
+  }
+
+    /* 앱라인 텍스트 애니메이션효과주기 */
+  .appbbs_box  .app_line {
+    animation: fadeInLeft 1s both 0.5s;
+  }
+
+
   .app_line  a {  display: inline-block;
       width: 42.4%;    height: 100px;
       line-height: 100px;    padding-left: 75px;
@@ -472,7 +483,13 @@ background-position:center; position:relative }
       background-image: url(../img/ico_phone.png);
       padding-left: 85px; }
 
-.bbs_line { float: right;    width: 30%;   }
+.bbs_line { float: right;    width: 30%; 
+  -webkit-transform: translate3d(250%, 0, 0);
+  transform: translate3d(250%, 0, 0);}
+
+.appbbs_box.on  .app_line {
+  animation: fadeInRight 1s both 0.5s;
+}
 .bbs_line  h3 {   font-size: 26px;  margin-bottom:10px  }
 .bbs_line  .notice_recent  li {  padding: 8px 0; }
 .bbs_line  .notice_recent  li  a { 
