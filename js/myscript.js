@@ -86,11 +86,14 @@ $("#header .closeMOgnb").on("click", function(){
     $(this).parents("#header").removeClass("on")
 })
 
+
 /* 사진을 누르면 새로 창나오는 팝업박스 만들기 */
+var lieq;    //전역변수라함
 $(".place_list > li > a").on("click", function(e){
     // 위 경로에 담겨 있는 링크가 눌리지 않게 preventDefault(); 요거를 씀
     e.preventDefault();
     // 각 속성을 가진게 추출이 되서 var 값에 담김
+    lieq = $(this).parent().index()
     var href = $(this).attr("href")
     var src = $(this).attr("data-src")
     var text = $(this).find("h3").text()
@@ -115,9 +118,51 @@ $(".place_list > li > a").on("click", function(e){
 })
 
 // 팝업창 엑스버튼을 누르면 창이 닫아짐
-$(".popupBox button").on("click", function(){
+$(".popupBox button.close").on("click", function(){
     $(this).parents(".popupBox").removeClass("on")
 })
+
+// 팝업창 사진 화살표버튼누르면 사진넘어가게 하기
+$(".popupBox button.prev").on("click", function(){
+    --lieq;   
+    if (lieq < 0 ) {
+            lieq = 2;
+    }
+
+    var href = $(".place_list > li").eq(lieq).find("a").attr("href")
+    var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+    var text = $(".place_list > li").eq(lieq).find("a").attr("h3").text()
+    var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+    var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+
+    $(".popupBox .inner h3").text(text)
+    $(".popupBox .inner p").text(info)
+    $(".popupBox .inner div a").attr("href", href)
+    $(".popupBox .inner div img").attr("src", src).attr("alt", alt).attr("width", "100%")
+})
+
+$(".popupBox button.next").on("click", function(){
+    ++lieq;   
+    if ( lieq > $("place_list > li").length ) {
+            lieq = 0;
+    }
+
+    var href = $(".place_list > li").eq(lieq).find("a").attr("href")
+    var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+    var text = $(".place_list > li").eq(lieq).find("a").attr("h3").text()
+    var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+    var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+
+    $(".popupBox .inner h3").text(text)
+    $(".popupBox .inner p").text(info)
+    $(".popupBox .inner div a").attr("href", href)
+    $(".popupBox .inner div img").attr("src", src).attr("alt", alt).attr("width", "100%")
+})
+
+
+
+
+
 
 // 메인슬라이드3개를 돌아가게 만듬.
 // 돌아가게 하려면 링크.slick.css와 스크립트slick.min.js을 꽂아놔야함
