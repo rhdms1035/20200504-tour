@@ -123,42 +123,37 @@ $(".popupBox button.close").on("click", function(){
 })
 
 // 팝업창 사진 화살표버튼누르면 사진넘어가게 하기
-$(".popupBox button.prev").on("click", function(){
-    --lieq;   
-    if (lieq < 0 ) {
+$(".popupBox   button.prev").on("click", function(){
+    --lieq;     //   2, 1, 0, 2, 1, 0
+    if ( lieq < 0 ) {
             lieq = 2;
     }
-
     var href = $(".place_list > li").eq(lieq).find("a").attr("href")
-    var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
-    var text = $(".place_list > li").eq(lieq).find("a").attr("h3").text()
-    var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
-    var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
-
-    $(".popupBox .inner h3").text(text)
-    $(".popupBox .inner p").text(info)
-    $(".popupBox .inner div a").attr("href", href)
-    $(".popupBox .inner div img").attr("src", src).attr("alt", alt).attr("width", "100%")
+     var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+     var text = $(".place_list > li").eq(lieq).find("a").find("h3").text()
+     var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+     var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+    $(".popupBox   .inner  h3").text(text)
+    $(".popupBox   .inner   p").text(info)
+    $(".popupBox   .inner   div  a").attr("href", href)
+    $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
 })
 
-$(".popupBox button.next").on("click", function(){
-    ++lieq;   
-    if ( lieq > $("place_list > li").length ) {
+$(".popupBox   button.next").on("click", function(){
+    ++lieq;     //   0, 1, 2, 0, 
+    if ( lieq == $(".place_list >li").length ) {
             lieq = 0;
     }
-
     var href = $(".place_list > li").eq(lieq).find("a").attr("href")
-    var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
-    var text = $(".place_list > li").eq(lieq).find("a").attr("h3").text()
-    var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
-    var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
-
-    $(".popupBox .inner h3").text(text)
-    $(".popupBox .inner p").text(info)
-    $(".popupBox .inner div a").attr("href", href)
-    $(".popupBox .inner div img").attr("src", src).attr("alt", alt).attr("width", "100%")
+     var src = $(".place_list > li").eq(lieq).find("a").attr("data-src")
+     var text = $(".place_list > li").eq(lieq).find("a").find("h3").text()
+     var info = $(".place_list > li").eq(lieq).find("a").find("p").text()
+     var alt = $(".place_list > li").eq(lieq).find("a").find("img").attr("alt")
+    $(".popupBox   .inner  h3").text(text)
+    $(".popupBox   .inner   p").text(info)
+    $(".popupBox   .inner   div  a").attr("href", href)
+    $(".popupBox   .inner   div  img").attr("src", src).attr("alt", alt).attr("width", "100%")
 })
-
 
 
 
