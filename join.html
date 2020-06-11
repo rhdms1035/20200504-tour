@@ -10,9 +10,12 @@
 	<link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/rwd.css">
 	<link rel="stylesheet" href="css/join.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-migrate-1.4.1.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+
 	<!--[if lte IE 9]>
 		<script src="js/html5shiv.js"></script>
 		<script src="js/prefixfree.min.js"></script>
@@ -146,6 +149,13 @@
 						 </li>
 
 						 <li class="cf">
+                            <label for="bd_lbl" class="tit_lbl pilsoo_item">생년월일</label>
+                            <div class="app_content">
+                                <input type="text" id="bd_lbl" name="bd_lbl">
+                            </div>
+						 </li>
+
+						 <li class="cf">
                             <label class="tit_lbl pilsoo_item">성별</label>
                             <div class="app_content radio_area">
 								<input type="radio" id="male" name="gender">
@@ -157,6 +167,8 @@
 						 <li class="cf">
 							<label class="tit_lbl">취미</label>
 							<div class="app_content hobby_area">
+								<input type="checkbox" id="allchek" name="allchek">
+								<label for="allchek">전체선택</label> 
 								<input type="checkbox" id="hobby1" name="hobby1">
 								<label for="hobby1">등산</label> 
 								<input type="checkbox" id="hobby2" name="hobby2">
@@ -251,6 +263,25 @@
 			var remain = maxlen - current
 			$(".app_content p span").text(remain)
 		})
+
+// 취미란에 전체선택누르면 다 선택되게하기
+		$("#allchek").on("click", function(){
+			var bool = $(this).prop("checked")
+				$(".hobby_area input[name^='hobby']").prop("checked", bool);
+		})
+
+		$("#bd_lbl").datepicker({
+				dateFormat:'yy-mm-dd',   //날짜형식
+				changeMonth:;true,        //월 선택
+				changeYear:true,         //연도 선택
+				yearRange:'1900:2020'      //연도 범위
+		})
+		$.datepicker.setDefaults({
+			dayNameMin:['일','월','화','수','목','금','토'],
+			monthNames:['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+			showMonthAfterYear:true,
+		})
+
 
 	</script>
 

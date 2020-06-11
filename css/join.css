@@ -23,6 +23,7 @@
 #container .join_tit .path {
     padding: 0 10px;
 }
+.join_form #bd_lbl {width:160px;}
 .join_form {
     padding: 55px 50px;
 }
